@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valery</title>
+    <link rel="stylesheet" href="jojos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+       
+        <div class="timer">
+            <h2>Tiempo Juntas</h2>
+            <span id="days">0000</span> Días
+            <span id="hours">00</span> Horas
+            <span id="minutes">00</span> Minutos
+            <span id="seconds">00</span> Segundos
+        </div>
+
+        <div class="calendar">
+            <h2>Fechas Especiales</h2>
+            <div class="polaroid-container">
+                <div class="polaroid">
+                    <img id="event-img-1" src="img/Noviasjojos.png" alt="Evento 1">
+                    <p id="event-description-1">Nos hicimos novias<br>02-01-2025</p>
+                </div>
+                <div class="polaroid">
+                    <img id="event-img-2" src="img/SanValentinjojos.jpg" alt="Evento 2">
+                    <p id="event-description-2">San Valentín<br>14-02-2025</p>
+                </div>
+            </div>
+            <button id="next-event">Siguiente</button>
+        </div>
+        
+
+
+        <!-- Apartado de imagen tipo carta -->
+        <div class="card-image">
+            <h2 class="titulocarta">Feliz Cumpleaños</h2>
+            <p class="Cartaa">Sos lo mas lindo de mi vida, la mujer que quiero a mi lado para siempre. Vivo 
+                completamente enamorada de usted, mi corazón le pertenece en su totalidad. 
+            </p>
+            <p class="Cartaa">Te amo amor de mi vida, te amo hoy, mañana y siempre.</p>
+            <p class="Cartaa2">Espero que le guste este 
+                programita que hice con muchisimo amor<3</p>
+
+        </div>
+        
+        <div class="photos">
+            <h2>Nosotras</h2>
+            <img id="photo" src="img/5.jpg" alt="Photo of us">
+            <button id="next-photo">Siguiente</button>
+        </div>
+        
+        <div class="playlist">
+            <h2>Canciones que me recuerdan a usted</h2>
+            <ul id="playlist">
+                <li>
+                    <img src="img/309.jpg" alt="Cover" class="song-cover">
+                    <button class="song" data-src="songs/309-Nsqk.mp3">309 - Nqsk</button>
+                    <button class="play-pause"><i class="fas fa-pause"></i></button>
+                </li>
+                <li>
+                    <img src="img/Gongoli.jpg" alt="Cover" class="song-cover">
+                    <button class="song" data-src="songs/Gongoli-Alvaro.mp3">Gongoli - Alvaro Díaz</button>
+                    <button class="play-pause"><i class="fas fa-pause"></i></button>
+                </li>
+                <li>
+                    <img src="img/cover3.jpg" alt="Cover" class="song-cover">
+                    <button class="song" data-src="songs/song3.mp3">---</button>
+                    <button class="play-pause"><i class="fas fa-pause"></i></button> 
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="theme-selector">
+            <button onclick="changeTheme('#')">Inicio</button>
+            <button onclick="changeTheme('hunter-x')">Hunter x Hunter</button>
+            <button onclick="changeTheme('beetlejuice')">Beetlejuice</button>
+            <button onclick="changeTheme('animales')">Animales</button>
+        </div>
+
+
+
+    </div>
+    <script src="jojos.js"></script>
+    <video autoplay muted loop id="video-background">
+        <source src="img/JojosIntro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="video-overlay"></div> <!-- Capa morada encima del video -->
+
+</body>
+</html>

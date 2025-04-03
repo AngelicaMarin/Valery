@@ -1,0 +1,326 @@
+
+
+/* Asegura que el video de fondo ocupe toda la pantalla */
+#video-background {
+    position: fixed; /* Fija el video para que no se mueva con el desplazamiento */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra toda la pantalla sin distorsión */
+    z-index: -2; /* Coloca el video detrás del filtro morado */
+}
+
+/* Capa morada encima del video */
+#video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(58, 0, 74, 0.7); /* Filtro morado semitransparente */
+    z-index: -1; /* Coloca la capa encima del video, pero debajo del contenido */
+}
+
+.pacifico-regular {
+    font-family: "Pacifico";
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+/* Otros estilos para el contenido */
+body {
+    font-family: pacifico,;
+    font-size: large;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* Alinea verticalmente el contenido */
+    position: relative;
+    flex-direction: column; /* Asegura que los elementos se distribuyan verticalmente */
+}
+
+.Cartaa{
+    text-align: justify;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: -10px ;
+}
+
+.Cartaa2{
+    text-align: justify;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.titulocarta{
+
+    margin-top: -80px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 22px;
+    padding: 10px;
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté por encima del video */
+
+}
+
+.timer, .calendar, .photos, .jojo-mode, .playlist, .card-image, .theme-selector {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.timer {
+    grid-column: span 3;
+}
+
+h2{
+    font-family: pacifico,;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.calendar {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+/* Efecto Polaroid para las imágenes */
+.photos {
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Centra el texto y la imagen */
+}
+
+#photo {
+    width: 100%;
+    max-width: 300px; /* Limita el ancho de la imagen */
+    height: auto;
+    border: 10px solid white; /* Borde blanco similar a Polaroid */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de elevación */
+    border-radius: 10%;
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+    transform: rotate(2deg); /* Ligera rotación para dar un toque "casual" */
+    transition: transform 0.3s ease-in-out; /* Transición suave al pasar el ratón */
+}
+
+#photo:hover {
+    transform: rotate(0deg); /* Vuelve a su estado original al pasar el ratón */
+}
+
+/* Opcional: Texto en la parte inferior de la imagen, como en una foto Polaroid */
+.photos p {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+
+.theme-selector {
+    grid-column: span 3;
+}
+
+.playlist {
+    grid-column: span 2;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.playlist p {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.song-cover {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.song {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.song:hover {
+    background-color: #9c27b0;
+}
+
+.play-pause {
+    background-color: #9c27b0;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.play-pause:hover {
+    background-color: #6a1b9a;
+}
+
+.play-pause:active {
+    background-color: #7b1fa2;
+}
+
+
+/* Estilo para los botones */
+button {
+    background-color: #6a1b9a; /* Color morado para el fondo */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 12px 24px; /* Relleno para hacer el botón más grande y cómodo */
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    border-radius: 30px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor para indicar que es un botón */
+    transition: all 0.3s ease; /* Efecto de transición suave */
+    margin-top: 10px; /* Espacio encima de los botones */
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #9c27b0; /* Color más claro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para el efecto de hover */
+}
+
+button:active {
+    background-color: #7b1fa2; /* Color más oscuro al hacer clic */
+    transform: scale(0.98); /* Efecto de reducción al hacer clic */
+}
+
+/* Opcional: Si necesitas un botón de "Next" específico */
+#next-photo {
+    background-color: #7b1fa2; /* Color morado claro */
+    color: white;
+    border-radius: 30px; /* Bordes redondeados */
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#next-photo:hover {
+    background-color: #9c27b0; /* Color más oscuro al pasar el ratón */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Asegura que los elementos dentro del container se alineen correctamente */
+.container .photos, .container .timer, .container .calendar, .container .jojo-mode, .container .playlist {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+}
+img {
+    width: 100%;
+    max-width: 300px; /* Tamaño máximo de las imágenes */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+#calendar-photo {
+    width: 100%;
+    max-width: 300px; /* Igual al tamaño de las imágenes de "Nosotras" */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Polaroid */
+.polaroid {
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    text-align: center;
+    margin: 10px;
+}
+.polaroid img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+.polaroid .description {
+    font-family: pacifico;
+    margin-top: 10px;
+    color: #6a1b9a;
+    font-weight: bold;
+    min-height: 30px;
+}
+
+.polaroid-container {
+    display: flex;
+    flex-direction: column; /* Cambia a columna */
+    align-items: center; /* Centra las polaroids */
+    gap: 20px; /* Espacio entre ellas */
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
+#next-event {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#next-event:hover {
+    background-color: #4a127a;
+}
+
+/* Apartado de imagen tipo carta */
+.card-image {
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Centra el texto y la imagen */
+}
+
+
