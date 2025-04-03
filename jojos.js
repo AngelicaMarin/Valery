@@ -25,12 +25,12 @@ setInterval(updateTimer, 1000);
 
 // Lista de las URLs de las fotos (puedes cambiar estas rutas por tus imágenes)
 const photos = [
-    'img/3.jpg',
-    'img/4.jpg',
+    'img/3jojos.png',
+    'img/4jojos.png',
     'img/1.jpg',
-    'img/2.jpg',
+    'img/2jojos.png',
     'img/12.jpg',
-    'img/9.jpg',
+    'img/9jojos.png',
     'img/13.jpg',
     'img/6.jpg',
     'img/10.jpg'
@@ -146,7 +146,7 @@ songButtons.forEach((button) => {
 
 
 //TEMAAAAs
-function changeTheme(inicio) {
-    window.location.href = inicio + ".html"; // Redirige a la vista correspondiente
+function changeTheme(index) {
+    window.location.href = index + ".html"; // Redirige a la vista correspondiente
 }
 
