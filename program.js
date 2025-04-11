@@ -149,4 +149,8 @@ songButtons.forEach((button) => {
 function changeTheme(jojos) {
     window.location.href = jojos + ".html"; // Redirige a la vista correspondiente
 }
+function changeTheme(animales) {
+    window.location.href = animales + ".html"; // Redirige a la vista correspondiente
+}
+
 

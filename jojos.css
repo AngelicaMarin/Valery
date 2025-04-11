@@ -104,7 +104,7 @@ body {
 
 }
 
-.timer, .calendar, .photos, .jojo-mode, .playlist, .card-image, .theme-selector {
+.timer, .calendar, .photos, .photosjojos, .jojo-mode, .playlist, .card-image, .theme-selector {
     background: rgba(0, 0, 0, 0.3);
     padding: 20px;
     border-radius: 10px;
@@ -135,6 +135,14 @@ h2{
     flex-direction: column; /* Centra el texto y la imagen */
 }
 
+.photosjojos {
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Centra el texto y la imagen */
+}
+
 #photo {
     width: 100%;
     max-width: 300px; /* Limita el ancho de la imagen */
@@ -152,6 +160,23 @@ h2{
     transform: rotate(0deg); /* Vuelve a su estado original al pasar el ratón */
 }
 
+#photojojos {
+    width: 100%;
+    max-width: 300px; /* Limita el ancho de la imagen */
+    height: auto;
+    border: 10px solid #4a127a
+    ; /* Borde blanco similar a Polaroid */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de elevación */
+    border-radius: 10%;
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+    transform: rotate(2deg); /* Ligera rotación para dar un toque "casual" */
+    transition: transform 0.3s ease-in-out; /* Transición suave al pasar el ratón */
+}
+
+#photojojos:hover {
+    transform: rotate(0deg); /* Vuelve a su estado original al pasar el ratón */
+}
+
 /* Opcional: Texto en la parte inferior de la imagen, como en una foto Polaroid */
 .photos p {
     font-weight: bold;
@@ -160,6 +185,15 @@ h2{
     margin-top: 10px;
     letter-spacing: 2px;
 }
+
+.photosjojos p {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
 
 
 .theme-selector {
@@ -275,8 +309,26 @@ button:active {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
+#next-photojojos {
+    font-family: 'JoJoFont2';
+    background-color: rgb(46, 3, 75); /* Color morado claro */
+    color: #b09b27;
+    border-radius: 30px; /* Bordes redondeados */
+    font-weight: bold;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#next-photojojos:hover {
+    background-color: rgb(107, 12, 170); /* Color más oscuro al pasar el ratón */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
 /* Asegura que los elementos dentro del container se alineen correctamente */
-.container .photos, .container .timer, .container .calendar, .container .jojo-mode, .container .playlist {
+.container .photos, .photosjojos, .container .timer, .container .calendar, .container .jojo-mode, .container .playlist {
     background: rgba(0, 0, 0, 0.3);
     padding: 20px;
     border-radius: 10px;

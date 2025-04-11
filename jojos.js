@@ -27,14 +27,15 @@ setInterval(updateTimer, 1000);
 const photos = [
     'img/3jojos.png',
     'img/4jojos.png',
-    'img/1.jpg',
+    'img/1jojos.png',
     'img/2jojos.png',
-    'img/12.jpg',
+    'img/12jojos.png',
     'img/9jojos.png',
-    'img/13.jpg',
-    'img/6.jpg',
-    'img/10.jpg'
+    'img/6jojos.jpg',
+    'img/11jojos.png',
+    'img/10jojos.png'
 ];
+
 
 // Variable para llevar el control de la foto actual
 let currentPhotoIndex = 0;
@@ -65,6 +66,41 @@ window.onload = () => {
     showPhoto(currentPhotoIndex);
 };
 
+
+const photosJojos = [
+    'img/1jojosp.jpg',
+    'img/2jojosp.jpg',
+    'img/3jojosp.jpg',
+    'img/4jojosp.jpg',
+    'img/5jojosp.jpg',
+    'img/6jojosp.jpg',
+    'img/7jojosp.jpg',
+];
+
+let currentPhotoIndexJojos = 0;
+
+function showPhotoJojos(index) {
+    const photoJojosElement = document.getElementById('photojojos');
+    photoJojosElement.src = photosJojos[index];
+}
+
+function autoChangePhotoJojos() {
+    currentPhotoIndexJojos = (currentPhotoIndexJojos + 1) % photosJojos.length;
+    showPhotoJojos(currentPhotoIndexJojos);
+}
+
+setInterval(autoChangePhotoJojos, 10000);
+
+document.getElementById('next-photojojos').addEventListener('click', () => {
+    currentPhotoIndexJojos = (currentPhotoIndexJojos + 1) % photosJojos.length;
+    showPhotoJojos(currentPhotoIndexJojos);
+});
+
+// === INICIALIZAR TODAS LAS FOTOS CUANDO CARGA LA PÁGINA ===
+window.onload = () => {
+    showPhoto(currentPhotoIndex); // Para photos
+    showPhotoJojos(currentPhotoIndexJojos); // Para photosjojos
+};
 
 
 // Lista de eventos con imágenes y descripciones
@@ -149,4 +185,9 @@ songButtons.forEach((button) => {
 function changeTheme(index) {
     window.location.href = index + ".html"; // Redirige a la vista correspondiente
 }
+
+function changeTheme(animales) {
+    window.location.href = animales + ".html"; // Redirige a la vista correspondiente
+}
+
 

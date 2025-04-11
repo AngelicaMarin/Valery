@@ -1,0 +1,227 @@
+/* Asegura que el video de fondo ocupe toda la pantalla */
+#video-background {
+  position: fixed; /* Fija el video para que no se mueva con el desplazamiento */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que el video cubra toda la pantalla sin distorsión */
+  z-index: -2; /* Coloca el video detrás del filtro morado */
+}
+
+/* Capa morada encima del video */
+#video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(58, 0, 74, 0.7); /* Filtro morado semitransparente */
+  z-index: -1; /* Coloca la capa encima del video, pero debajo del contenido */
+}
+
+/* Estilo general basado en el anterior proyecto */
+body {
+  font-family: pacifico,;
+  font-size: large;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-direction: column; /* Asegura que los elementos se distribuyan verticalmente */
+}
+
+header {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: #e0b3ff;
+  text-shadow: 2px 2px #000;
+}
+
+.titulo{
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  grid-column: span 1;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #5f259f;
+  color: #e0b3ff;
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* ...lo anterior permanece igual... */
+
+.nav-buttons {
+  margin-top: 20px;
+}
+
+.nav-buttons button {
+  background-color: #9d4edd;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  margin: 5px;
+  font-size: 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: 'Pirata One', cursive;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.nav-buttons button:hover {
+  background-color: #c77dff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(255, 0, 255, 0.6);
+}
+
+
+/* VIDEO DE FONDO COMO EN EL INDEX ORIGINAL */
+#fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#fondo video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* HEADER CON FORMATO IGUAL AL CONTENEDOR .timer */
+.animal-header {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.titulo-header {
+  flex: 1;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.botones-header {
+  display: flex;
+  gap: 15px;
+  padding-right: 20px;
+}
+
+.botones-header button {
+  background-color: #7f5af0;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.botones-header button:hover {
+  background-color: #9876ff;
+  transform: scale(1.05);
+}
+
+/* GALERÍA DE IMÁGENES */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px 10px;
+  margin-top: 20px;
+}
+
+.gallery-container img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: #e0b0ff;
+  text-shadow: 0 0 5px #b084cc;
+}
+
+.theme-selector{
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  grid-column: span 3;
+}
+
+/* Estilo para los botones */
+button {
+  background-color: #6a1b9a; /* Color morado para el fondo */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 12px 24px; /* Relleno para hacer el botón más grande y cómodo */
+  font-size: 1.2rem; /* Tamaño de fuente más grande */
+  border-radius: 30px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor para indicar que es un botón */
+  transition: all 0.3s ease; /* Efecto de transición suave */
+  margin-top: 10px; /* Espacio encima de los botones */
+  display: inline-block;
+}
+
+button:hover {
+  background-color: #9c27b0; /* Color más claro al pasar el ratón */
+  transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para el efecto de hover */
+}
+
+button:active {
+  background-color: #7b1fa2; /* Color más oscuro al hacer clic */
+  transform: scale(0.98); /* Efecto de reducción al hacer clic */
+}

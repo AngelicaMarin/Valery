@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Biblioteca de Animales</title>
+  <link rel="stylesheet" href="animales.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <div class="titulo">
+            <h2>Galeria de Mascotas</h2>
+        </div>
+
+
+  <main class="gallery-container">
+    <!-- Aquí se insertan las imágenes desde JS -->
+  </main>
+  
+  
+  <div class="theme-selector">
+    <button onclick="changeTheme('index')">Inicio</button>
+    <button onclick="changeTheme('jojos')">JoJo's</button>
+</div>
+
+  <!-- VIDEO DE FONDO COMO EN EL CÓDIGO ORIGINAL -->
+  <div id="fondo">
+    <video autoplay muted loop id="video-background">
+        <source src="img/fondo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="video-overlay"></div> <!-- Capa morada encima del video -->
+
+  </div>
+
+    </div>
+
+  <script src="animales.js"></script>
+</body>
+</html>
