@@ -10,13 +10,13 @@ const imageNames = [
   'krippy1.jpg',
   'sukini1.jpg',
   'nana1.jpg',
-  'martin.jpg',
+  'Martin.jpg',
 
   'gato4.jpg',
   'gato5.jpg',
   'jason2.jpg',
   'krippy2.jpg',
-
+  'kush.jpg'
 
   // Agregá aquí todos los nombres que tengas...
 ];
