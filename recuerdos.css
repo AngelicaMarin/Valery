@@ -1,0 +1,165 @@
+/* Estilos generales */
+
+
+/* Asegura que el video de fondo ocupe toda la pantalla */
+#video-background {
+    position: fixed;
+    /* Fija el video para que no se mueva con el desplazamiento */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que el video cubra toda la pantalla sin distorsión */
+    z-index: -2;
+    /* Coloca el video detrás del filtro morado */
+}
+
+/* Capa morada encima del video */
+#video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(58, 0, 74, 0.7);
+    /* Filtro morado semitransparente */
+    z-index: -1;
+    /* Coloca la capa encima del video, pero debajo del contenido */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e0036, #5e0b7b);
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #d6a6ff;
+    text-shadow: 0 0 10px #ff6ef6;
+}
+
+/* Contenedor de cartas */
+.cartas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    justify-items: center;
+    padding: 20px;
+}
+
+/* Carta */
+.carta {
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+.carta-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.carta:hover .carta-inner {
+    transform: rotateY(180deg);
+}
+
+/* Caras */
+.carta-front,
+.carta-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.carta-front {
+    background: #fff;
+    color: #000;
+}
+
+.carta-front img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.carta-front h2 {
+    margin: 10px;
+    font-size: 1.3rem;
+}
+
+.carta-back {
+    background: linear-gradient(135deg, #7a0ca6, #ff66cc);
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.carta-back h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.carta-back p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.theme-selector {
+    grid-column: span 3;
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #6a1b9a;
+    /* Color morado para el fondo */
+    color: white;
+    /* Texto blanco */
+    border: none;
+    /* Sin borde */
+    padding: 12px 24px;
+    /* Relleno para hacer el botón más grande y cómodo */
+    font-size: 1.2rem;
+    /* Tamaño de fuente más grande */
+    border-radius: 30px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambia el cursor para indicar que es un botón */
+    transition: all 0.3s ease;
+    /* Efecto de transición suave */
+    margin-top: 10px;
+    /* Espacio encima de los botones */
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #9c27b0;
+    /* Color más claro al pasar el ratón */
+    transform: scale(1.05);
+    /* Efecto de aumento al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra suave para el efecto de hover */
+}
+
+button:active {
+    background-color: #7b1fa2;
+    /* Color más oscuro al hacer clic */
+    transform: scale(0.98);
+    /* Efecto de reducción al hacer clic */
+}

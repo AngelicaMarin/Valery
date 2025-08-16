@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Pacifico&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <div class="container">
-       
+
         <div class="timer">
             <h2>Tiempo Juntas</h2>
             <span id="days">0000</span> Días
@@ -35,27 +38,27 @@
             </div>
             <button id="next-event">Siguiente</button>
         </div>
-        
+
 
 
         <!-- Apartado de imagen tipo carta -->
         <div class="card-image">
             <h2 class="titulocarta">Feliz Cumpleaños</h2>
-            <p class="Cartaa">Sos lo mas lindo de mi vida, la mujer que quiero a mi lado para siempre. Vivo 
-                completamente enamorada de usted, mi corazón le pertenece en su totalidad. 
+            <p class="Cartaa">Sos lo mas lindo de mi vida, la mujer que quiero a mi lado para siempre. Vivo
+                completamente enamorada de usted, mi corazón le pertenece en su totalidad.
             </p>
             <p class="Cartaa">Te amo amor de mi vida, te amo hoy, mañana y siempre.</p>
-            <p class="Cartaa2">Espero que le guste este 
-                programita que hice con muchisimo amor<3</p>
+            <p class="Cartaa2">Espero que le guste este
+                programita que hice con muchisimo amor.</p>
 
         </div>
-        
+
         <div class="photos">
             <h2>Nosotras</h2>
             <img id="photo" src="img/5.jpg" alt="Photo of us">
             <button id="next-photo">Siguiente</button>
         </div>
-        
+
         <div class="playlist">
             <h2>Canciones que me recuerdan a usted</h2>
             <ul id="playlist">
@@ -72,15 +75,17 @@
                 <li>
                     <img src="img/heavy.webp" alt="Cover" class="song-cover">
                     <button class="song" data-src="songs/The Marías-Heavy.mp3">Heavy - The Marías</button>
-                    <button class="play-pause"><i class="fas fa-pause"></i></button> 
+                    <button class="play-pause"><i class="fas fa-pause"></i></button>
 
                 </li>
             </ul>
         </div>
 
         <div class="theme-selector">
+            <button onclick="changeTheme('index')">Inicio</button>
             <button onclick="changeTheme('jojos')">JoJo's</button>
             <button onclick="changeTheme('animales')">Animales</button>
+            <button onclick="changeTheme('cartas')">Cartas</button>
         </div>
 
 
@@ -94,4 +99,5 @@
     <div id="video-overlay"></div> <!-- Capa morada encima del video -->
 
 </body>
+
 </html>

@@ -1,0 +1,172 @@
+/* Sección Cartas */
+
+
+/* Asegura que el video de fondo ocupe toda la pantalla */
+#video-background {
+    position: fixed;
+    /* Fija el video para que no se mueva con el desplazamiento */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que el video cubra toda la pantalla sin distorsión */
+    z-index: -2;
+    /* Coloca el video detrás del filtro morado */
+}
+
+/* Capa morada encima del video */
+#video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 18, 22, 0.7);
+    /* Filtro morado semitransparente */
+    z-index: -1;
+    /* Coloca la capa encima del video, pero debajo del contenido */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e0036, #5e0b7b);
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #d6a6ff;
+    text-shadow: 0 0 10px #ff6ef6;
+}
+
+.letters {
+    color: #eee;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 20px;
+}
+
+.letters-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #270e12;
+    /* vino romántico */
+    text-shadow: 0 0 10px rgb(5, 0, 2);
+}
+
+/* Año */
+.year {
+    margin-bottom: 20px;
+    border-left: 3px solid #720412;
+    padding-left: 10px;
+}
+
+.year-header {
+    cursor: pointer;
+    font-size: 1.4rem;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.year-header:hover {
+    background: rgba(53, 1, 5, 0.801);
+}
+
+.year-content {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Carta */
+.letter {
+    margin: 8px 0;
+}
+
+.letter-header {
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    background: rgba(53, 1, 5, 0.801);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.letter-header:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.letter-content {
+    display: none;
+    background: #0a040a;
+    border: 1px solid rgba(255, 0, 21, 0.801);
+    border-radius: 8px;
+    margin-top: 5px;
+    padding: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    box-shadow: inset 0 0 10px rgba(196, 5, 21, 0.801);
+}
+
+.letter-content p {
+    white-space: pre-line;
+}
+
+/* Flechas */
+.arrow {
+    margin-right: 8px;
+    color: rgba(196, 5, 21, 0.801);
+    font-weight: bold;
+}
+
+
+.theme-selector {
+    grid-column: span 3;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Estilo para los botones */
+button {
+    background-color: rgba(53, 1, 5, 0.801);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Color más claro al pasar el ratón */
+    transform: scale(1.05);
+    /* Efecto de aumento al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra suave para el efecto de hover */
+}
+
+button:active {
+    background-color: rgba(196, 5, 21, 0.801);
+    /* Color más oscuro al hacer clic */
+    transform: scale(0.98);
+    /* Efecto de reducción al hacer clic */
+}
+
+.card p {
+    white-space: pre-line;
+    /* respeta <br> y no hace saltos de línea automáticos */
+}

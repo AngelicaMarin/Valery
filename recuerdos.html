@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuerdos</title>
+    <link rel="stylesheet" href="recuerdos.css">
+</head>
+
+<body>
+    <h1 class="titulo">Mi vida a tu lado</h1>
+
+    <div class="cartas-container">
+        <!-- Carta 1 -->
+        <div class="carta">
+            <div class="carta-inner">
+                <div class="carta-front">
+                    <img src="img1.jpg" alt="Imagen 1">
+                    <h2>Día Especial</h2>
+                </div>
+                <div class="carta-back">
+                    <h3>14 de Febrero</h3>
+                    <p>Nuestro primer San Valentín 💜</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carta 2 -->
+        <div class="carta">
+            <div class="carta-inner">
+                <div class="carta-front">
+                    <img src="img2.jpg" alt="Imagen 2">
+                    <h2>Aventura</h2>
+                </div>
+                <div class="carta-back">
+                    <h3>Viaje a la playa</h3>
+                    <p>El día que vimos medusas brillando en la orilla 🌊✨</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carta 3 -->
+        <div class="carta">
+            <div class="carta-inner">
+                <div class="carta-front">
+                    <img src="img3.jpg" alt="Imagen 3">
+                    <h2>Recuerdo</h2>
+                </div>
+                <div class="carta-back">
+                    <h3>Noche mágica</h3>
+                    <p>La primera vez que bailamos bajo la lluvia 🌧️💃</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carta">
+            <div class="carta-inner">
+                <div class="carta-front">
+                    <img src="img4.jpg" alt="Imagen 4">
+                    <h2>Recuerdo</h2>
+                </div>
+                <div class="carta-back">
+                    <h3>Noche mágica</h3>
+                    <p>La primera vez que bailamos bajo la lluvia 🌧️💃</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carta">
+            <div class="carta-inner">
+                <div class="carta-front">
+                    <img src="img5.jpg" alt="Imagen 5">
+                    <h2>5</h2>
+                </div>
+                <div class="carta-back">
+                    <h3>Noche mágica</h3>
+                    <p>La primera vez que bailamos bajo la lluvia 🌧️💃</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="theme-selector">
+        <button onclick="changeTheme('index')">Inicio</button>
+        <button onclick="changeTheme('jojos')">JoJo's</button>
+        <button onclick="changeTheme('animales')">Animales</button>
+    </div>
+
+    <script src="recuerdos.js"></script>
+
+    <video autoplay muted loop id="video-background">
+        <source src="img/fondo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="video-overlay"></div> <!-- Capa morada encima del video -->
+
+</body>
+
+</html>
