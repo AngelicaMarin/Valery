@@ -30,16 +30,18 @@ const imageNames = [
     '2.jpeg',
     '3.jpeg',
     '4.jpeg',
+
     '5.jpeg',
     '6.jpeg',
     '7.jpeg',
     '8g.jpeg',
+
     '9.jpeg',
     '10.jpeg'
     // Agregá aquí todos los nombres que tengas...
 ];
 
-const basePath = 'img/nosotras/';
+const basePath = 'img/Nosotras/';
 
 imageNames.forEach(name => {
     const img = document.createElement('img');
