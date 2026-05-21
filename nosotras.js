@@ -35,11 +35,7 @@ const imageNames = [
     '7.jpeg',
     '8g.jpeg',
     '9.jpeg',
-    '10.jpeg',
-
-
-
-
+    '10.jpeg'
     // Agregá aquí todos los nombres que tengas...
 ];
 
